@@ -6,4 +6,28 @@
   Другой вариант - использовать метод split строк, и метод массива join.
 */
 
-function capitalizeWords() {}
+function capitalizeWords(str) {
+
+  let result = '';
+
+  for (let i = 0; i < str.length; i++) {
+
+    const currentChar = str[i];
+
+    // Если это начало строки или предыдущий символ был пробелом
+    // то это начало слова
+    if (i === 0 || str[i - 1] === ' ') {
+
+      result += currentChar.toUpperCase()
+    } else {
+
+      result += currentChar
+    }
+
+
+
+  }
+  return result;
+
+}
+
