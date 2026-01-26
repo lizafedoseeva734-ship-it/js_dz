@@ -7,27 +7,23 @@
 */
 
 function capitalizeWords(str) {
-
   let result = '';
+  let capitalizeNext = true;
 
   for (let i = 0; i < str.length; i++) {
+    const char = str[i];
 
-    const currentChar = str[i];
-
-    // Если это начало строки или предыдущий символ был пробелом
-    // то это начало слова
-    if (i === 0 || str[i - 1] === ' ') {
-
-      result += currentChar.toUpperCase()
+    if (capitalizeNext && char !== ' ') {
+      result += char.toUpperCase();
+      capitalizeNext = false;
     } else {
-
-      result += currentChar
+      result += char;
     }
 
-
-
+    if (char === ' ') {
+      capitalizeNext = true;
+    }
   }
+
   return result;
-
 }
-

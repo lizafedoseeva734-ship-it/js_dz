@@ -9,19 +9,8 @@ function isOnlyDigits(str) {
   const trimmed = str.trim();
 
 
-  if (trimmed === '') {
-    return false;
-  }
+  return trimmed !== '' && !isNaN(Number(trimmed));
 
-  for (let i = 0; i < trimmed.length; i++) {
-    const char = trimmed[i];
-
-    if (char < '0' || char > '9') {
-      return false;
-    }
-  }
-
-  return true;
 }
 
 console.log(isNumeric("123")) // Ожидаемый результат: true
