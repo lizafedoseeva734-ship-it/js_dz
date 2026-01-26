@@ -8,11 +8,16 @@
 * truncate("Вот, что мне действительно нравится в этом", 20) // Ожидаемый результат: "Вот, что мне действи..."
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
+
 function truncate(str, maxLength) {
-  if (str.length <= maxLength) {
-    return str;
+
+  function truncate(str, maxLength) {
+    if (str.length <= maxLength) {
+      return str;
+    }
+    return str.slice(0, maxLength - 3) + "...";
   }
 
 
-  return str.slice(0, maxLength - 3) + "...";
+
 }

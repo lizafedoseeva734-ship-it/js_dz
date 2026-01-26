@@ -7,6 +7,8 @@
 */
 
 function capitalizeWords(str) {
+  if (typeof str !== 'string' || str.trim() === '') return str;
+
   let result = '';
   let capitalizeNext = true;
 
